@@ -1,18 +1,147 @@
+/* ===== 色の設定（ここを変えると全体の色が変わります） ===== */
+:root {
+  --bg: #fff8f0;       /* 背景 */
+  --accent: #d9778a;   /* 見出し・アクセント */
+  --text: #444444;     /* 文字 */
+  --card: #ffffff;     /* カードの背景 */
+  --line: #f1d9d9;     /* 線 */
+}
+
+/* ===== 全体 ===== */
+* { box-sizing: border-box; }
+
 body {
-  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
-  background-color: #fff8f0;
-  color: #444444;
   margin: 0;
-  padding: 24px;
-  line-height: 1.8;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  line-height: 1.9;
 }
 
-h1 {
-  color: #d9778a;
+/* ===== ヘッダー ===== */
+.site-header {
   text-align: center;
+  padding: 0 16px 24px;
+  background: var(--card);
+  border-bottom: 3px solid var(--line);
 }
 
-p {
-  max-width: 600px;
+/* 鍵盤をイメージした帯（白と黒のしましま） */
+.keys {
+  height: 28px;
+  margin: 0 -16px 24px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #ffffff 0, #ffffff 26px,
+      #444444 26px, #444444 38px,
+      #ffffff 38px, #ffffff 64px
+    );
+  border-bottom: 2px solid var(--accent);
+}
+
+.site-header h1 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 1.8rem;
+  letter-spacing: 0.08em;
+}
+
+.catch {
+  margin: 8px 0 16px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+nav a {
+  margin: 0;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  white-space: nowrap;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+}
+
+nav a:hover {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+/* ===== 本文 ===== */
+main {
+  max-width: 760px;
   margin: 0 auto;
+  padding: 8px 16px 32px;
+}
+
+section {
+  padding: 24px 0;
+}
+
+section h2 {
+  color: var(--accent);
+  font-size: 1.4rem;
+  padding-bottom: 6px;
+  border-bottom: 2px dotted var(--accent);
+}
+
+/* ===== カード ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 18px;
+}
+
+.card h3 {
+  margin: 4px 0;
+  color: var(--accent);
+  font-size: 1.05rem;
+}
+
+.card p {
+  margin: 4px 0 8px;
+}
+
+/* ===== あとで書き直す場所の目印（公開前に消してください） ===== */
+.todo {
+  background: #fff3c4;
+  border-left: 4px solid #e0b000;
+  padding: 4px 10px;
+  font-size: 0.9rem;
+}
+
+/* ===== フッター ===== */
+footer {
+  text-align: center;
+  padding: 20px 16px;
+  font-size: 0.85rem;
+  border-top: 3px solid var(--line);
+}
+
+/* ===== 画面が狭いとき（スマホ） ===== */
+@media (max-width: 480px) {
+  .site-header h1 { font-size: 1.4rem; }
+
+  nav a {
+    flex: 1 1 auto;
+    padding: 12px 4px;
+    font-size: 0.8rem;
+    text-align: center;
+  }
 }
