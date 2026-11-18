@@ -69,6 +69,7 @@ nav a {
   text-decoration: none;
   border: 1px solid var(--accent);
   border-radius: 999px;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 nav a:hover {
@@ -132,6 +133,48 @@ footer {
   padding: 20px 16px;
   font-size: 0.85rem;
   border-top: 3px solid var(--line);
+}
+
+/* ==== つけくわえ ==== */
+.photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  margin: 16px 0;
+}
+
+.hero {
+  height: 38vh;
+  min-height: 220px;
+  max-height: 420px;
+  background:
+    url("images/hero.jpg") center / cover no-repeat,
+    linear-gradient(135deg, #fde7ea, #fff3e0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(217, 119, 138, 0.18);
+}
+
+nav a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .card { transition: none; }
+  .card:hover { transform: none; }
 }
 
 /* ===== 画面が狭いとき（スマホ） ===== */
