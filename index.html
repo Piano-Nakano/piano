@@ -5,59 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>八王子 中野ピアノ教室</title>
   <meta name="description" content="JR八王子駅から徒歩12分、閑静な住宅地にあるピアノ教室です！">
+  <script>document.documentElement.classList.add('js');</script> 
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>    
 </head>
 <body>
   <header class="site-header">
     <div class="keys" aria-hidden="true"></div>
-    <h1>八王子　中野ピアノ教室</h>
-    <p class="catch">ピアノを弾く喜びを、のびのびと。</p>
+    <h1>八王子　中野ピアノ教室</h1>
+    <p class="catch">ピアノを弾くよろこびを、のびのびと。</p>
     <nav>
-      <a href="#greeting">ご挨拶</a>
-      <a href="#lesson">レッスン</a>
-      <a href="#access">教室案内</a>
-      <a href="#contact">お問い合わせ</a>
+      <a href="index.html" aria-current="page">ご挨拶</a>
+      <a href="lesson.html">レッスン</a>
+      <a href="access.html">教室案内</a>
+      <a href="contact.html">お問い合わせ</a>
     </nav>
   </header>
 
   <div class="hero" aria-hidden="true"></div>
 
   <main>
-    <section id="greeting">
+    <section id="greeting" class="reveal">
       <h2>ご挨拶</h2>
-      <img class="photo" src="images/classroom.jpg" alt="教室のグランドピアノ">
-      <p>当ホームページをご覧いただき、ありがとうございます。</p>
-      <p>教室はJR八王子駅から徒歩15分、閑静な住宅地にあります。小さなお子さまから中学生（入会時）まで、一人ひとりに合わせた丁寧なレッスンを行っています。</p>
-      <p>ピアノの魅力と、演奏する喜びを知っていただくことが、いちばんの目標です。のびのびとした指導を心がけています。</p>
-      <p>趣味として楽しみたい方も、より専門的に学びたい方も、どうぞお気軽にお問い合わせください。</p>
-      <p class="todo">※</p>
+      <p>ホームページをご覧いただき、ありがとうございます。</p>
+      <p>当教室は、JR八王子駅から徒歩12分、閑静な住宅地にあります。小さなお子さまから、大人・シニアの方まで、一人ひとりに合わせた丁寧なレッスンを行っています。</p>
+      <p>ピアノの魅力と、演奏する喜びを知っていただくことが、いちばんの目標です。のびのびとした指導を心がけています。趣味として楽しみたい方も、より専門的に学びたい方も、どうぞお気軽にお問い合わせください。</p>
+      <img class="photo" src="images/building.jpg" alt="外観">
     </section>
 
-    <section id="lesson">
-      <h2>レッスンについて</h2>
-
-      <div class="cards">
-        <div class="card">
-          <h3>対象</h3>
-          <p class="todo">小さなお子さまから中学生まで</p>
-        </div>
-        <div class="card">
-          <h3>月謝</h3>
-          <p class="todo">※ ご記入ください</p>
+    <section class="reveal">
+      <h2>講師紹介</h2>
+        <img class="photo"  src="images/teacher.jpg" alt="講師">
+          <h3>中野裕美</h3>
+          <ul class="career">
+            <li>1972年生まれ。3歳よりピアノを始める。</li>
+            <li>国立音楽大学教育学部卒業。</li>
+            <li>大学時代、ウィーン国立音楽大学へ2度の短期留学。世界的に著名な講師陣による個人指導を受ける。</li>
+            <li>卒業後は、近郊の福祉施設で音楽の講師（音楽療法・リトミック）を務めながら、ピアノの講師を始める。</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section id="access">
-      <h2>教室案内</h2>
-      <p>JR八王子駅から徒歩15分、閑静な住宅地にあります。</p>
-      <p class="todo">※ 住所や地図をどこまで載せるかは、先生と相談して決めてください。</p>
-    </section>
-
-    <section id="contact">
-      <h2>お問い合わせ</h2>
-      <p>体験レッスンのご相談も、お気軽にどうぞ。</p>
-      <p class="todo">※ 連絡方法（電話・メールなど）を決めて、ご記入ください。</p>
+    <section class="reveal">
+      <h2>ご案内</h2>
+      <div class="cards">
+        <a class="card card-link" href="lesson.html">
+          <h3>レッスンについて</h3>
+          <p>対象・日時・月謝などをご案内します。</p>
+        </a>
+        <a class="card card-link" href="access.html">
+          <h3>教室案内</h3>
+          <p>教室の場所へのご案内です。</p>
+        </a>
+        <a class="card card-link" href="contact.html">
+          <h3>お問い合わせ</h3>
+          <p>体験レッスンのご相談もこちらから。</p>
+        </a>
+        <a class="card card-link" href="events.html">
+          <h3>発表会・イベント</h3>
+          <p>過去の発表会や、クリスマス会をご紹介します。</p>
+        </a>
+        <a class="card card-link" href="links.html">
+          <h3>周辺施設一覧</h3>
+          <p>近隣施設のご紹介です。</p>
+        </a>
+      </div>
     </section>
 
   </main>
